@@ -1,0 +1,8 @@
+a {
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: baseline;
+  background: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
