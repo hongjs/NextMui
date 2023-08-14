@@ -7,15 +7,6 @@ import { TypographyOptions } from '@mui/material/styles/createTypography';
 
 const theme = createTheme({});
 
-console.log(
-  theme.palette.augmentColor({
-    color: {
-      main: '#473E72',
-    },
-    name: 'tertiary',
-  }),
-);
-
 const breakpoints: BreakpointsOptions = {
   values: {
     xs: 0,
