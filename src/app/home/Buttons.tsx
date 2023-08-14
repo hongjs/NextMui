@@ -43,21 +43,15 @@ const Buttons = () => {
           </Button>
         </Box>
         <Box component="div" sx={{ display: 'flex', gap: '16px', pb: '32px' }}>
-          <Button variant="text" color="primary">
-            Primary
-          </Button>
-          <Button variant="text" color="secondary">
-            Secondary
-          </Button>
-          <Button variant="text" color="tertiary" size="medium">
+          <Button color="primary">Primary</Button>
+          <Button color="secondary">Secondary</Button>
+          <Button color="tertiary" size="medium">
             Tertiary
           </Button>
-          <Button variant="text" color="quaternary" size="medium">
+          <Button color="quaternary" size="medium">
             Quaternary
           </Button>
-          <Button variant="text" disabled>
-            Disabled
-          </Button>
+          <Button disabled>Disabled</Button>
         </Box>
         <Box component="div" sx={{ display: 'flex', gap: '16px', pb: '32px' }}>
           <Button variant="contained" color="primary" size="large" startIcon={<RefreshIcon />}>

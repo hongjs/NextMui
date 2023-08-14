@@ -2,8 +2,8 @@ import { NextResponse } from 'next/server';
 
 export async function GET(req: Request) {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
+
   if (!res.ok) {
-    // This will activate the closest `error.js` Error Boundary
     throw new Error('Failed to fetch data');
   }
 

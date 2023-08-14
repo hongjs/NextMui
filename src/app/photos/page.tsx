@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 import PhotoContainer from './PhotoContainer';
 
 const PhotoPage = () => {
-  const { fetchPhotos, loading, photos } = usePhoto();
+  const { fetchPhotos } = usePhoto();
 
   useEffect(() => {
     fetchPhotos();

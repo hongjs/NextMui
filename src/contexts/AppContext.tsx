@@ -1,7 +1,7 @@
 'use client';
 
 import { AppReducer, initialState } from '@/reducers/AppReducer';
-import { AppContextProps } from '@/types';
+import { AppContextProps } from '@/types/appState';
 import { createContext, useMemo, useReducer } from 'react';
 
 export const AppContext = createContext<AppContextProps>({

@@ -1,5 +1,3 @@
-'use client';
-
 import { Grid } from '@/components/mui';
 import { IPost } from '@/types/appState';
 import PostCard from './PostCard';

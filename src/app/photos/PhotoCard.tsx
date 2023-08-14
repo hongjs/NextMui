@@ -1,6 +1,6 @@
 'use client';
 import { Card, CardContent, CardMedia, Typography } from '@/components/mui';
-import { IPhoto } from '@/types';
+import { IPhoto } from '@/types/appState';
 import Image from 'next/image';
 
 interface PostCardProps {

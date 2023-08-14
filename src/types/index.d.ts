@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-
 export declare module '@mui/material/styles' {
   interface Palette {
     tertiary?: Palette['tertiary'];

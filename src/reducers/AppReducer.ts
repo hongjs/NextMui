@@ -1,7 +1,7 @@
 export const FETCH_PHOTO_PENDING = 'FETCH_PHOTO_PENDING';
 export const FETCH_PHOTO_COMPLETED = 'FETCH_PHOTO_COMPLETED';
 
-import type { IAppReducer, IAppState } from '@/types';
+import type { IAppReducer, IAppState } from '@/types/appState';
 
 export const AppReducer: IAppReducer = (state, action) => {
   switch (action.type) {
