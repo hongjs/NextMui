@@ -9,6 +9,9 @@ const Buttons = () => {
         </Typography>
 
         <Box component="div" sx={{ display: 'flex', gap: '16px', pb: '32px' }}>
+          <Typography gutterBottom variant="h4" color="primary.light" sx={{ fontWeight: 700 }}>
+            Light:
+          </Typography>
           <Typography gutterBottom variant="h4" color="primary.light" sx={{ fontWeight: 600 }}>
             Primary
           </Typography>
@@ -23,6 +26,9 @@ const Buttons = () => {
           </Typography>
         </Box>
         <Box component="div" sx={{ display: 'flex', gap: '16px', pb: '32px' }}>
+          <Typography gutterBottom variant="h4" color="primary" sx={{ fontWeight: 700 }}>
+            Main:
+          </Typography>
           <Typography gutterBottom variant="h4" color="primary" sx={{ fontWeight: 600 }}>
             Primary
           </Typography>
@@ -37,6 +43,9 @@ const Buttons = () => {
           </Typography>
         </Box>
         <Box component="div" sx={{ display: 'flex', gap: '16px', pb: '32px' }}>
+          <Typography gutterBottom variant="h4" color="primary.dark" sx={{ fontWeight: 700 }}>
+            Dark:
+          </Typography>
           <Typography gutterBottom variant="h4" color="primary.dark" sx={{ fontWeight: 600 }}>
             Primary
           </Typography>

@@ -9,49 +9,45 @@ const Buttons = () => {
           Button
         </Typography>
         <Box component="div" sx={{ display: 'flex', gap: '16px', pb: '32px' }}>
-          <Button variant="contained" color="primary" size="large">
+          <Button variant="contained" color="primary">
             Primary
           </Button>
-          <Button variant="contained" color="secondary" size="medium">
+          <Button variant="contained" color="secondary">
             Secondary
           </Button>
-          <Button variant="contained" color="tertiary" size="medium">
+          <Button variant="contained" color="tertiary">
             Tertiary
           </Button>
-          <Button variant="contained" color="quaternary" size="medium">
+          <Button variant="contained" color="quaternary">
             Quaternary
           </Button>
-          <Button variant="contained" disabled size="small">
-            Disabled
-          </Button>
-        </Box>
-        <Box component="div" sx={{ display: 'flex', gap: '16px', pb: '32px' }}>
-          <Button variant="outlined" color="primary">
-            Primary
-          </Button>
-          <Button variant="outlined" color="secondary">
-            Secondary
-          </Button>
-          <Button variant="outlined" color="tertiary" size="medium">
-            Tertiary
-          </Button>
-          <Button variant="outlined" color="quaternary" size="medium">
-            Quaternary
-          </Button>
-          <Button variant="outlined" disabled>
+          <Button variant="contained" disabled>
             Disabled
           </Button>
         </Box>
         <Box component="div" sx={{ display: 'flex', gap: '16px', pb: '32px' }}>
           <Button color="primary">Primary</Button>
           <Button color="secondary">Secondary</Button>
-          <Button color="tertiary" size="medium">
+          <Button color="tertiary">Tertiary</Button>
+          <Button color="quaternary">Quaternary</Button>
+          <Button disabled>Disabled</Button>
+        </Box>
+        <Box component="div" sx={{ display: 'flex', gap: '16px', pb: '32px' }}>
+          <Button variant="text" color="primary">
+            Primary
+          </Button>
+          <Button variant="text" color="secondary">
+            Secondary
+          </Button>
+          <Button variant="text" color="tertiary">
             Tertiary
           </Button>
-          <Button color="quaternary" size="medium">
+          <Button variant="text" color="quaternary">
             Quaternary
           </Button>
-          <Button disabled>Disabled</Button>
+          <Button variant="text" disabled>
+            Disabled
+          </Button>
         </Box>
         <Box component="div" sx={{ display: 'flex', gap: '16px', pb: '32px' }}>
           <Button variant="contained" color="primary" size="large" startIcon={<RefreshIcon />}>
