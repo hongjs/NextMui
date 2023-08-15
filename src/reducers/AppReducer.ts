@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 import { default as act } from '@/reducers/actionTypes';
 import type { IAppReducer, IAppState, IPhoto } from '@/types/appState';
 
