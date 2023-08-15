@@ -1,11 +1,8 @@
-import { AppBar, Box, Button, Container, IconButton, Toolbar, Typography } from '@/components/mui';
-import { Menu as MenuIcon } from '@mui/icons-material';
-
+import { MainLayout } from '@/components';
 import Providers from '@/contexts/Providers';
 import '@/theme/globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
-import Link from 'next/link';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -19,39 +16,7 @@ const RootLayout: React.FC<Props> = ({ children }) => {
     <html lang="en">
       <body className={inter.className}>
         <Providers>
-          <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="fixed" color="primary">
-              <Toolbar>
-                <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
-                  <MenuIcon />
-                </IconButton>
-                <Link href="/">
-                  <Typography variant="h6" component="div" sx={{ color: '#fff', fontWeight: 600 }}>
-                    Home
-                  </Typography>
-                </Link>
-                <Box sx={{ pl: '16px' }}>
-                  <Link href="/posts">
-                    <Typography component="div" variant="h6" sx={{ color: '#fff', fontWeight: 600 }}>
-                      Post
-                    </Typography>
-                  </Link>
-                </Box>
-                <Box sx={{ pl: '16px' }}>
-                  <Link href="/photos">
-                    <Typography component="div" variant="h6" sx={{ color: '#fff', fontWeight: 600 }}>
-                      Photo
-                    </Typography>
-                  </Link>
-                </Box>
-                <Box sx={{ flexGrow: 1 }} />
-                <Button color="inherit">Login</Button>
-              </Toolbar>
-            </AppBar>
-          </Box>
-          <Container maxWidth="lg" sx={{ p: '32px', pt: '96px' }}>
-            {children}
-          </Container>
+          <MainLayout>{children}</MainLayout>
         </Providers>
       </body>
     </html>

@@ -6,7 +6,7 @@ import Image from 'next/image';
 interface PostCardProps {
   data: IPhoto;
 }
-const PhotoCard: React.FC<PostCardProps> = ({ data }) => {
+const photoCard: React.FC<PostCardProps> = ({ data }) => {
   return (
     <Card>
       <CardMedia>
@@ -20,4 +20,4 @@ const PhotoCard: React.FC<PostCardProps> = ({ data }) => {
     </Card>
   );
 };
-export default PhotoCard;
+export default photoCard;

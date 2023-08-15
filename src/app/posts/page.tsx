@@ -25,7 +25,7 @@ const fetchData = async (): Promise<IPost[]> => {
     throw new Error('Failed to fetch data');
   }
 
-  return res.json();
+  return res.json() as unknown as IPost[];
 };
 
 export default PostsPage;

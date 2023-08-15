@@ -1,18 +1,22 @@
+import { Dispatch } from 'react';
+
 export interface IAppState {
   photo: IPhotoItem;
 }
 
-export type AppContextProps = {
+export interface AppContextProps {
   state: IAppState;
-  dispatch: Dispatch<any>;
-};
+  dispatch: Dispatch<IAppReducerAction>;
+}
 
 export type IAppReducer = (state: IAppState, action: IAppReducerAction) => IAppState;
 
 interface IAppReducerAction {
   type: string;
-  payload: any;
+  payload?: unknown;
 }
+
+export type IAction = (dispatch: Dispatch<IAppReducerAction>) => Promise<void>;
 
 export interface IPost {
   userId: number;

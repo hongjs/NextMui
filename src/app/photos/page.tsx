@@ -10,7 +10,7 @@ const PhotoPage = () => {
 
   useEffect(() => {
     fetchPhotos();
-  }, []);
+  }, [fetchPhotos]);
 
   return (
     <>

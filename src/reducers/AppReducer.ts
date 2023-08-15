@@ -1,16 +1,18 @@
-export const FETCH_PHOTO_PENDING = 'FETCH_PHOTO_PENDING';
-export const FETCH_PHOTO_COMPLETED = 'FETCH_PHOTO_COMPLETED';
-
-import type { IAppReducer, IAppState } from '@/types/appState';
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+import { default as act } from '@/reducers/actionTypes';
+import type { IAppReducer, IAppState, IPhoto } from '@/types/appState';
 
 export const AppReducer: IAppReducer = (state, action) => {
   switch (action.type) {
-    case FETCH_PHOTO_PENDING: {
+    case act.FETCH_PHOTO_PENDING: {
       return { ...state, photo: { ...state.photo, loading: true } };
     }
 
-    case FETCH_PHOTO_COMPLETED: {
-      return { ...state, photo: { ...state.photo, loading: false, items: action.payload } };
+    case act.FETCH_PHOTO_COMPLETED: {
+      return {
+        ...state,
+        photo: { ...state.photo, loading: false, items: action.payload as IPhoto[] },
+      };
     }
 
     default:

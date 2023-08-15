@@ -8,15 +8,20 @@ module.exports = {
     sourceType: 'module',
     tsconfigRootDir: __dirname,
 
-    // "project": "./tsconfig.json"
+    project: './tsconfig.json',
   },
   extends: [
     'next/core-web-vitals',
     'prettier',
+    'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended-type-checked',
     'plugin:@typescript-eslint/stylistic-type-checked',
   ],
   rules: {
+    camelcase: 'error',
+    'react/jsx-pascal-case': 'error',
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': 'off',
     // "@typescript-eslint/no-confusing-void-expression": "warn",
     // "@typescript-eslint/no-non-null-assertion": "warn",
     // "@typescript-eslint/no-unnecessary-condition": "warn",
