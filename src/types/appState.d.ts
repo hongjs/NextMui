@@ -4,19 +4,30 @@ export interface IAppState {
   photo: IPhotoItem;
 }
 
-export interface AppContextProps {
-  state: IAppState;
-  dispatch: Dispatch<IAppReducerAction>;
+export interface IPhotoState {
+  photo: IPhotoItem;
 }
 
-export type IAppReducer = (state: IAppState, action: IAppReducerAction) => IAppState;
+export interface AuthState {
+  userId: string;
+  token: string;
+}
 
-interface IAppReducerAction {
+export interface AppContextProps {
+  state: IAppState;
+  dispatch: Dispatch<ReducerAction>;
+}
+
+export type IAppReducer = (state: IAppState, action: ReducerAction) => IAppState;
+export type IAuthReducer = (state: AuthState, action: ReducerAction) => AuthState;
+export type IPhotoReducer = (state: IPhotoState, action: ReducerAction) => IPhotoState;
+
+interface ReducerAction {
   type: string;
   payload?: unknown;
 }
 
-export type IAction = (dispatch: Dispatch<IAppReducerAction>) => Promise<void>;
+export type IAction = (dispatch: Dispatch<ReducerAction>) => Promise<void>;
 
 export interface IPost {
   userId: number;

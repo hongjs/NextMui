@@ -19,12 +19,16 @@
     "@mui/icons-material": "^5.14.3",
     "@mui/material": "^5.14.4",
     "next": "13.4.13",
+    "next-auth": "^4.23.0",
     "react": "^18.2.0",
-    "react-dom": "18.2.0"
+    "react-combine-reducers": "^1.1.1",
+    "react-dom": "18.2.0",
+    "swiper": "10.2.0"
   },
   "devDependencies": {
     "@types/node": "20.4.9",
     "@types/react": "^18.2.20",
+    "@types/react-combine-reducers": "^1.0.0",
     "@types/react-dom": "18.2.7",
     "@typescript-eslint/eslint-plugin": "^6.3.0",
     "@typescript-eslint/parser": "^6.3.0",
