@@ -1,15 +1,15 @@
 'use client';
 
+import { Spinner } from '@/components';
 import { Grid } from '@/components/mui';
 import { usePhoto } from '@/hooks';
 import PostCard from './PhotoCard';
 
 const PhotoContainer: React.FC = () => {
   const { loading, photos } = usePhoto();
-
   return (
     <>
-      {loading && <div>Loading...</div>}
+      {loading && <Spinner />}
       {!loading && (
         <Grid container spacing={2}>
           {photos.map((i) => {

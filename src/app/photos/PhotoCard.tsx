@@ -1,10 +1,10 @@
 'use client';
 import { Card, CardContent, CardMedia, Typography } from '@/components/mui';
-import { IPhoto } from '@/types/appState';
+import { Photo } from '@/types/appState';
 import Image from 'next/image';
 
 interface PostCardProps {
-  data: IPhoto;
+  data: Photo;
 }
 const photoCard: React.FC<PostCardProps> = ({ data }) => {
   return (

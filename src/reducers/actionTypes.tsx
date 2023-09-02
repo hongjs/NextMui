@@ -1,6 +1,4 @@
-const actionTypes = Object.freeze({
-  FETCH_PHOTO_PENDING: 'FETCH_PHOTO_PENDING',
-  FETCH_PHOTO_COMPLETED: 'FETCH_PHOTO_COMPLETED',
+export const authAction = Object.freeze({
+  LOGIN_PENDING: 'LOGIN_PENDING',
+  LOGIN_COMPLETED: 'LOGIN_COMPLETED',
 });
-
-export default actionTypes;

@@ -1,5 +1,5 @@
 import { Typography } from '@/components/mui';
-import { type IPost } from '@/types/appState';
+import { type Post } from '@/types/appState';
 import PostContainer from './PostContainer';
 
 const PostsPage = async () => {
@@ -18,14 +18,14 @@ const PostsPage = async () => {
   );
 };
 
-const fetchData = async (): Promise<IPost[]> => {
+const fetchData = async (): Promise<Post[]> => {
   const res = await fetch('https://jsonplaceholder.typicode.com/posts');
 
   if (!res.ok) {
     throw new Error('Failed to fetch data');
   }
 
-  return res.json() as unknown as IPost[];
+  return res.json() as unknown as Post[];
 };
 
 export default PostsPage;

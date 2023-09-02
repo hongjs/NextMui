@@ -1,27 +1,19 @@
-import { default as act } from '@/reducers/actionTypes';
-import type { IAppReducer, IAppState, IPhoto } from '@/types/appState';
+import { PhotoReducer, initialState as photoState } from '@/app/photos/reducer/PhotoReducer';
+import { UserReducer, initialState as userState } from '@/app/users/reducer/UserReducer';
+import type { AppReducerType, AppState } from '@/types/appState';
+import { AuthReducer, initialState as authState } from './AuthReducer';
 
-export const AppReducer: IAppReducer = (state, action) => {
-  switch (action.type) {
-    case act.FETCH_PHOTO_PENDING: {
-      return { ...state, photo: { ...state.photo, loading: true } };
-    }
-
-    case act.FETCH_PHOTO_COMPLETED: {
-      return {
-        ...state,
-        photo: { ...state.photo, loading: false, items: action.payload as IPhoto[] },
-      };
-    }
-
-    default:
-      return state;
-  }
+export const AppReducer: AppReducerType = (state, action) => {
+  return {
+    ...state,
+    auth: AuthReducer(state.auth, action),
+    user: UserReducer(state.user, action),
+    photo: PhotoReducer(state.photo, action),
+  };
 };
 
-export const initialState: IAppState = {
-  photo: {
-    items: [],
-    loading: false,
-  },
+export const initialState: AppState = {
+  auth: authState,
+  user: userState,
+  photo: photoState,
 };

@@ -1,11 +1,7 @@
-import { Typography } from '@/components/mui';
+import { Spinner } from '@/components';
 
 const Loading = () => {
-  return (
-    <Typography component="div" variant="h3">
-      Loading...
-    </Typography>
-  );
+  return <Spinner />;
 };
 
 export default Loading;

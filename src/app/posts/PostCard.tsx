@@ -1,8 +1,8 @@
 import { Card, CardContent, Typography } from '@/components/mui';
-import { IPost } from '@/types/appState';
+import { Post } from '@/types/appState';
 
 interface PostCardProps {
-  data: IPost;
+  data: Post;
 }
 const PostCard: React.FC<PostCardProps> = ({ data }) => {
   return (

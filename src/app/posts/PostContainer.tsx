@@ -1,9 +1,9 @@
 import { Grid } from '@/components/mui';
-import { IPost } from '@/types/appState';
+import { Post } from '@/types/appState';
 import PostCard from './PostCard';
 
 interface PostContainerProps {
-  data: IPost[];
+  data: Post[];
 }
 const PostContainer: React.FC<PostContainerProps> = ({ data }) => {
   return (

@@ -12,10 +12,12 @@ export const AppContext = createContext<AppContextProps>({
 const AppContextWrapper: React.FC<Props> = ({ children }) => {
   const [state, dispatch] = useReducer(AppReducer, initialState);
 
-  const reducerValue = useMemo(() => ({ state, dispatch }), [state, dispatch]);
+  const cachedValue = useMemo(() => {
+    return { state, dispatch };
+  }, [state, dispatch]);
 
   return (
-    <AppContext.Provider value={reducerValue}>
+    <AppContext.Provider value={cachedValue}>
       <>{children}</>
     </AppContext.Provider>
   );

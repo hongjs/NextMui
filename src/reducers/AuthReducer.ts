@@ -1,27 +1,31 @@
-import { default as act } from '@/reducers/actionTypes';
-import type { IPhoto, IPhotoReducer, IPhotoState } from '@/types/appState';
+import { authAction as act } from '@/reducers/actionTypes';
+import type { AuthReducerType, AuthState } from '@/types/appState';
 
-export const AuthReducer: IPhotoReducer = (state, action) => {
+export const AuthReducer: AuthReducerType = (state, action) => {
   switch (action.type) {
-    case act.FETCH_PHOTO_PENDING: {
-      return { ...state, photo: { ...state.photo, loading: true } };
-    }
-
-    case act.FETCH_PHOTO_COMPLETED: {
+    case act.LOGIN_PENDING: {
       return {
         ...state,
-        photo: { ...state.photo, loading: false, items: action.payload as IPhoto[] },
+        loading: true,
       };
     }
 
-    default:
+    case act.LOGIN_COMPLETED: {
+      return {
+        ...state,
+        loading: false,
+      };
+    }
+
+    default: {
       return state;
+    }
   }
 };
 
-export const initialState: IPhotoState = {
-  photo: {
-    items: [],
-    loading: false,
-  },
+export const initialState: AuthState = {
+  userId: null,
+  token: null,
+  loading: false,
+  errorMessage: null,
 };

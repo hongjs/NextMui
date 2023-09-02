@@ -1,4 +1,4 @@
-import { fetchPhotos } from '@/app/photos/actions/photoAction';
+import { fetchPhotos } from '@/app/photos/reducer/photoAction';
 import { useAppContext } from '@/hooks';
 import { useCallback } from 'react';
 

@@ -3,31 +3,28 @@ import { Menu as MenuIcon } from '@mui/icons-material';
 import Link from 'next/link';
 
 const Header: React.FC<Props> = () => {
+  const items = [
+    { link: '/', text: 'Home' },
+    { link: '/posts', text: 'Post' },
+    { link: '/photos', text: 'Photo' },
+    { link: '/users', text: 'Users' },
+  ];
+
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="fixed" color="primary">
         <Toolbar>
-          <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2 }}>
+          <IconButton size="large" edge="start" color="inherit" aria-label="menu">
             <MenuIcon />
           </IconButton>
-          <Link href="/">
-            <Typography variant="h6" component="div" sx={{ color: '#fff', fontWeight: 600 }}>
-              Home
-            </Typography>
-          </Link>
-          <Box sx={{ pl: '16px' }}>
-            <Link href="/posts">
-              <Typography component="div" variant="h6" sx={{ color: '#fff', fontWeight: 600 }}>
-                Post
-              </Typography>
-            </Link>
-          </Box>
-          <Box sx={{ pl: '16px' }}>
-            <Link href="/photos">
-              <Typography component="div" variant="h6" sx={{ color: '#fff', fontWeight: 600 }}>
-                Photo
-              </Typography>
-            </Link>
+          <Box sx={{ display: 'flex', gap: '16px', ml: '16px' }}>
+            {items.map((item) => (
+              <Link key={item.link} href={item.link}>
+                <Typography variant="h6" component="div" sx={{ color: '#fff', fontWeight: 600 }}>
+                  {item.text}
+                </Typography>
+              </Link>
+            ))}
           </Box>
           <Box sx={{ flexGrow: 1 }} />
           <Button color="inherit">Login</Button>
