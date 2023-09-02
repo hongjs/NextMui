@@ -1,11 +1,11 @@
-import { Box, Button, Typography } from '@/components/mui';
 import { RefreshOutlined as RefreshIcon } from '@mui/icons-material';
+import { Box, Button, Typography } from '@mui/material';
 
 const Buttons = () => {
   return (
     <main>
       <div>
-        <Typography gutterBottom variant="h3" color="primary" sx={{ fontWeight: 600 }}>
+        <Typography id="label" gutterBottom variant="h3" color="primary" sx={{ fontWeight: 600 }}>
           Button
         </Typography>
         <Box component="div" sx={{ display: 'flex', gap: '16px', pb: '32px' }}>

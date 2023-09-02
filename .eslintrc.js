@@ -1,10 +1,10 @@
-module.exports = {
+const config = {
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
-    ecmaVersion: 13,
+    ecmaVersion: 2022,
     sourceType: 'module',
     tsconfigRootDir: __dirname,
 
@@ -43,3 +43,5 @@ module.exports = {
     // "@typescript-eslint/non-nullable-type-assertion-style": "warn"
   },
 };
+
+module.exports = config;
