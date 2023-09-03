@@ -1,4 +1,3 @@
-import { MainLayout } from '@/components';
 import Providers from '@/contexts/Providers';
 import '@/theme/globals.css';
 import type { Metadata } from 'next';
@@ -19,9 +18,7 @@ const RootLayout: React.FC<Props> = ({ children }) => {
         <link rel="prefetch" href="/images/bg.webp" />
       </Head>
       <body className={inter.className}>
-        <Providers>
-          <MainLayout>{children}</MainLayout>
-        </Providers>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
