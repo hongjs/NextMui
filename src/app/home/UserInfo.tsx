@@ -5,11 +5,10 @@ import { signOut, useSession } from 'next-auth/react';
 
 const UserInfo = () => {
   const { data: session } = useSession();
+
   const handleLogout = () => {
     void signOut();
   };
-
-  console.log('session', session);
 
   return (
     <div>

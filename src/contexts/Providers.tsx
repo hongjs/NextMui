@@ -1,9 +1,8 @@
 'use client';
 
 import { ThemeRegistry } from '@/theme';
-import AppContextWrapper from './AppContext';
-
 import { SessionProvider } from 'next-auth/react';
+import AppContextWrapper from './AppContext';
 
 const Providers: React.FC<Props> = ({ children }: Props) => {
   return (
